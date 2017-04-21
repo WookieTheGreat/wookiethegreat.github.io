@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    background-color: #abcdef;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#main-container {
+    position: fixed;
+    margin: 2%;
+    width: 96%; height: 90%;
+    background-color: #deebf8;
+}
+
+#presentation-header {
+    padding: 2%;
+    padding-top: 2%;
+    padding-right: 0;
+    width: 98%;
+    background-color: #478fd7;
+    font-family: Helvetica, sans-serif;
+    font-size: large; font-style: italic;
+    color: #f2f7fc;
+}
+
+#presentation-content {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding-right: 4%;
+    display: block;
+    list-style: none;
+}
+
+ul.menu {
+    text-decoration: none;
+    float: right;
+    color: #fff;
+    text-align: right;
+}
+
+ul.menu-sub {
+    display: none;
+    text-align: right;
+    background-color: #478fd7;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.1);
+}
+
+ul.menu > li:hover > ul.menu-sub {
+    display: block;
+    cursor: pointer;
+}
+
+#main {
+    display: none;
+    text-align: center;
+    padding: 15%;
+}
+
+#intro {
+    display: none;
+    padding: 2%;
+    padding-top: 15%;
+}
+
+#creationism {
+    display: none;
+    padding: 2%;
+    padding-top: 12%;
+}
+
+#spontaneous-generation {
+    display: none;
+    padding: 2%;
+    padding-top: 12%;
+}
+
+#pansperm {
+    display: none;
+    padding: 2%;
+    padding-top: 12%;
+}
+
+#bioevolution {
+    display: none;
+    padding: 2%;
+    padding-top: 12%;
+}
+
+.button {
+    display: inline-block;
+    width: 94%;
+    padding: 2%;
+    margin: 1%;
+    background-color: #478fd7;
+    color: #fff;
+    text-align: center;
+}

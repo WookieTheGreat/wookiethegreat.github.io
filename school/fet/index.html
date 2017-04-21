@@ -1,0 +1,110 @@
+<head>
+
+	<title>Афанасий Афанасьевич Фет</title>
+
+	<style type="text/css">
+		body {
+			margin: 0 0 0;
+			background-color: #f1f1f1;
+			background-image: url(background_fet.png);
+	   		background-repeat: no-repeat;
+	   		background-position: -25%;
+	   		background-size: contain;
+		}
+		#content-container {
+			position: absolute;
+			margin-top: 10%;
+			width: 99%;
+			height: 80%;
+			background-color: rgba(0,0,0,0.1);
+			border: 6px solid;
+			border-radius: 40px 10px;
+			border-color: rgba(0,0,0,0.1);
+		}
+		#text-container {
+			float: left;
+			padding: 55px;
+			width: 65%;
+	   		font-family: Tahoma;
+	   		font-style: oblique;	   		
+	   		text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+		}
+		#image-container {
+			padding: 15px;
+			margin-left: 73%;
+		}
+		#menu-container {
+			position: absolute;
+			width: 90%;
+			height: 10%;
+			padding: 25px;
+			font-family: Tahoma;
+	   		font-style: oblique;
+	   		font-size: 15px;
+	   		color: rgba(0,0,0,0.2);
+		}
+		.big-text {
+			font-size: 25px;
+		}
+
+		.button {
+			display: inline;
+		}
+		.button:hover {
+			color: rgba(0,0,0,0.4);
+			cursor: pointer;
+		}
+	</style>
+
+	<script type="text/javascript" src="fet.js"></script>
+
+	<script type="text/javascript">
+		var theme = "date";
+		var text = fet[theme].text;
+		var image = fet[theme].image;
+
+		function setText(){
+			document.getElementById("text-container").innerHTML = text;
+			document.getElementById("image-container").innerHTML = image;
+		}
+
+		function setArray(arg){
+			text = fet[arg].text;
+			image = fet[arg].image;
+
+			setText();
+		}
+
+		window.onload = function(){
+			setText();
+		}
+		
+	</script>
+
+</head>
+
+<body>
+	
+	<div id="content-container">
+
+		<div id="text-container"> </div>
+
+		<div id="image-container"> </div>
+
+	</div>
+
+	<div id="menu-container">
+		<div class="big-text">Афанасий Афанасьевич Фет</div>
+		23 ноября (5 декабря) 1820 - 21 ноября (3 декабря) 1892<br>
+		<div class="button" onclick="setArray('date')">Даты</div> |
+		<div class="button" onclick="setArray('childhood')">Детство</div> | 
+		<div class="button" onclick="setArray('education')">Образование</div> | 
+		<div class="button" onclick="setArray('service')">Служба</div> | 
+		<div class="button" onclick="setArray('love')">Любовь</div> | 
+		<div class="button" onclick="setArray('family')">Семейная жизнь</div> | 
+		<div class="button" onclick="setArray('creativeness')">Творчество</div> | 
+		<div class="button" onclick="setArray('death')">Смерть</div>
+		<div style="float: right;">Сделал Антон Завьялов, ученик 10 класса МБОУ ТСОШ №1</div>
+	</div>
+
+</body>

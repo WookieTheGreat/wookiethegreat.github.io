@@ -1,0 +1,114 @@
+﻿<html>
+
+	<head>
+		<title>G.A.S. - gear acquistion syndrome</title>
+		<style>
+			body {
+				background: #f9f9f9;
+				background-image: url(logo_opacity.png);
+				background-repeat: no-repeat;
+				background-position: 50% -14%;
+				margin: 0 0 0;
+			}
+			#header {
+				width: 98%;
+				background: #f1f1f1;
+				height: auto;
+				padding: 1%;
+				font-family: Tahoma, sans-serif;
+			}
+			a {
+				color: black;
+				text-decoration: none;
+			}
+			#container-logo {
+				display: inline;
+			}
+			#container-logo:hover, a:hover {
+				color: #999999;
+				cursor: pointer;
+			}
+			#body {
+				position: absolute;
+				padding: 1%;
+				margin: 2%;
+				margin-left: 24%;
+				width: 72%;
+				min-height: 83%;
+				max-height: auto;
+				background: rgba(0,0,0,0.05);
+			}
+			#left-container {
+				background: #f0f0f0;
+				margin: 2%;
+				margin-left: 2%;
+				width: 22%;
+				height: 86%;
+				position: absolute;
+			}
+			#main-container {
+				margin-left: 20%;
+				width: 74%;
+				height: 84%;
+				position: absolute;
+				padding: 2%;
+			}
+			#news-upper {
+				min-height: 4%;
+				text-align: center;
+				padding-top: 5px;
+				padding-bottom: 15px;
+				background: #999999;
+			}
+			.information {
+				padding-top: 5px;
+				padding-bottom: 15px;
+				padding-left: 15px;
+				padding-right: 5px;
+				text-align: center;
+				cursor: pointer;
+			}
+		</style>
+	
+		<script type="text/javascript">
+			var gearContent = [
+						"<center><b>AMT Japanese Girl WH-1</b></center><br><b>Цена</b>: 4590 руб<br><b>Качество</b>:7/10<br><b>Звук</b>: 8/10<br><br><b>Отзыв</b>:<br>AMT WH-1 - эргономичная педаль 'wah-wah' от омской фирмы AMT Electronics. В отличие от других педалей эффектов подобного типа, занимает очень мало места, вмещаясь в корпус типа 'MXR'. Имеет три типа работы, которые регулируют диапазон фильтрации частот. Распределение потенциала происходит при помощи оптической регуляции потенциометра, что, в отличии от механической, когда сопротивление в резисторе меняется благодаря непосредственному воздействию, позволяет увеличить срок пользования прибором без замены комплектующих.<br>По звуку педаль несколько уступает другим представителям рынка, но хорошо работает с модуляцией, перегрузами.<br><img src='wh1.jpg'/>",
+						"<center><b>Digitech Hot Rod Rock Distortion</b></center><br><b>Цена</b>: 3800 руб<br><b>Качество</b>:7/10<br><b>Звук</b>: 7/10<br><br><b>Отзыв</b>:<br><br><img src='hotrod.jpeg'/><br>За свои деньги - достаточно хороший перегруз. Педаль цифровая, моделирует различные типы перегрузов, за это отвечает ручка ''Morph''. Кроме нее есть еще три - volume, tone, gain, отвечающие, соответственно, за уровень выходного сигнала, регулировку тембра, уровень входного сигнала. Имеется два выхода - в усилитель и в ''линию'', линейный выход представляет ужасную эмуляцию кабинета и для игры, например, в наушники совершенно не подходит.",
+						"<center><b>XVIVE V5 Delay</b></center><br><b>Цена</b>: 3950 руб<br><b>Качество</b>:7/10<br><b>Звук</b>: 8/10<br><br><b>Отзыв</b>: Классическая аналоговая педаль задержки, выполненная в миниатюрном корпусе. Имеет три ручки контроля звука - volume, echo, feedback, которые отвечают за длину задержки, смешивание ее с чистым сигналом, количество ''фидбека''. Звук, несмотря на аналоговость, отдает цифровым звучанием, наподобие BOSS Digital Delay. Главный плюс педали - конечно, ее миниатюрность, при желании, ее можно поместить даже в карман.<br><img src='xvive.jpg'/>"];
+			function setText(numb)
+			{
+				document.getElementById("body").innerHTML = gearContent[numb];
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div id="header">
+			<a href="index.html">G.A.S. - all about musical amplificaton</a> | 
+			<a href="pedalboard.html">Pedalboard Planer</a> |
+			<a href="constructor.html">Guitar Constructor</a> |
+			<a href="gear.html">Gear Reviews</a> |
+			<a href="faq.html">FAQ</a> |
+		</div>
+		
+		<div id="body">
+			Текст меняется через скрипт, доп. страниц нет.
+		</div>
+		
+		<div id="left-container">
+				<div id="news-upper">
+					Обзоры на гитарную электронику
+				</div>
+				<div class="information" id="amt_wh_1" onclick="setText(0)">
+					AMT WH-1
+				</div>
+				<div class="information" id="digi_hr" onclick="setText(1)">
+					Digitech Hot Rod Rock Distortion
+				</div>
+				<div class="information" id="xvive_dl" onclick="setText(2)">
+					XVIVE V5 Delay
+				</div>
+		</div>
+	</body>
+	
+</html>

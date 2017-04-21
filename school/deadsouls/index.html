@@ -1,0 +1,109 @@
+<!-- Copyright: авторство html, css, js принадлежит Антону Завьялову -->
+<html>
+
+<head>
+	<title>Таблица характеров персонажей первого тома произведения Н.В. Гоголя "Мертвые души"</title>
+	
+	<style>
+		body {
+			background-color: #F9F9F9;
+			margin: 0 0 0;
+		}
+		#header {
+			padding-left: 25px;
+			padding-top: 15px;
+			padding-bottom: 25px;
+		}
+		
+		#italic {
+			font-family: Tahoma;
+			font-style: italic;
+			font-size: 14;
+		}
+		
+		#header-message {
+			font-family: Tahoma;
+			font-style: italic;
+			text-align: center;
+		}
+		#table-container {
+			width: 950px;
+			border: 1px solid #999999;
+			border-radius: 25px;
+		}
+		.button {
+			background-color: #999999;
+			border: 1px solid #888888;
+			border-radius: 25px;
+			color: #F9F9F9;
+			width: 150px;
+			display: inline-block;
+			vertical-align: middle;
+			height: 20px;
+			cursor: pointer;
+		}
+		.button:hover {			
+			background-color: #888888;
+			border: 1px solid #777777;		
+			color: #F8F8F8;
+		}
+		.table {
+			width: 750px;
+			border: 1px solid #999999;
+			border-radius: 25px;
+		}
+	</style>
+
+	<script src="howler.min.js"></script>
+	<script src="info.js"></script>
+	<script>
+		var person = "Cicikov";
+		var type = info[person].name;
+		
+		function setText(){
+			document.getElementById("text").innerHTML = type;
+		}
+		
+		window.onload = function(){
+			var sound = new Howl({
+				urls: ['music.mp3', 'music.ogg'],
+				loop: true,
+				volume: 0.2
+			}).play();
+		}
+	</script>
+</head>
+
+<body>
+	<div id="header">
+		<img src="pero.png" style="height: 150px;"/>
+		<div id="italic">"Один за другим следуют у меня герои один пошлее другого" - Н. В. Гоголь</div>
+	</div>
+	<hr>
+	<div id="header-message">
+		Таблица характеров персонажей первого тома произведения Н.В. Гоголя "Мертвые души"<br>
+		Выполнил Антон Завьялов, ученик 9-А класса
+	</div>
+	<hr>
+	<center><div id="table-container">
+		<br>
+		<div id="italic" class="button" onclick='person = "Cicikov"; type = info[person].name; setText()'>Чичиков</div>
+		<div id="italic" class="button" onclick='person = "Manilov"; type = info[person].name; setText()'>Манилов</div>
+		<div id="italic" class="button" onclick='person = "Korobocka"; type = info[person].name; setText()'>Коробочка</div>
+		<div id="italic" class="button" onclick='person= "Nozdrev"; type = info[person].name; setText()'>Ноздрев</div>
+		<div id="italic" class="button" onclick='person = "Sobakevich"; type = info[person].name; setText()'>Собакевич</div>
+		<div id="italic" class="button" onclick='person = "Plushkin"; type = info[person].name; setText()'>Плюшкин</div><hr>
+		<div id="italic" class="button" onclick="type = info[person].name; setText()">ФИО</div>
+		<div id="italic" class="button" onclick="type = info[person].age; setText()">Возраст</div>
+		<div id="italic" class="button" onclick="type = info[person].status; setText()">Соц. статус</div>
+		<div id="italic" class="button" onclick="type = info[person].look; setText()">Внешность</div>
+		<div id="italic" class="button" onclick="type = info[person].info; setText()">Цитаты и сведения</div>
+		<div id="italic" class="button" onclick="type = info[person].relation; setText()">Мое отношение</div><hr>
+		<br>
+		<div id="italic" class="table">
+			<div id="text">Нажмите на любую интересующую вас кнопку<br>(Верхний ряд - выбор персонажа, <br>нижний ряд - выбор интересующей информации о нем)</div>
+		</div><br>
+	</div></center>
+</body>
+
+</html>

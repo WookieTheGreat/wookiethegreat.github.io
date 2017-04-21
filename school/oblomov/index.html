@@ -1,0 +1,158 @@
+﻿<head>
+
+	<title>
+		Таблица образов персонажей романа И.А. Гончарова "Обломов"
+	</title>
+		
+	<style>
+		body {
+			margin: 0 0 0;
+			background-image: url(wood.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		#menu-container {
+	   		 	position: absolute;
+	   		 	/*left: -50px;*/
+			    height: 100%;
+			    width: 350px;
+	   		 	display: block;
+	   		 	background-image: url(block.png);
+	   		 	background-repeat: no-repeat;
+    			background-size: 100% 100%;
+    			background-position: -50px;
+	   		 	/*box-shadow: -10px 0 25px rgba(0,0,0,0.5);
+	   		 	font-family: Arial;*/
+	   	}
+	   	#interface-container {
+	   		display: block;
+	   		position: absolute;
+	   		left: 300px;
+	   		top: 0; right: 0; bottom: 0;
+	   		height: 100%;
+	   	}
+	   	#colons-container {
+	   		position: absolute;
+	   		display: inline-block;
+	   		width: 90%;
+	   		margin-left: 5%; margin-right: 5%;
+	   		margin-top: 50px; margin-bottom: 25px;
+	   	}
+	   	#content-container {
+	   		position: absolute;
+	   		margin-left: 10%; margin-right: 10%;
+	   		margin-top: 15%; margin-bottom: 5%;
+	   		width: 80%;
+	   		height: 75%;
+	   		background-image: url(content.png);
+	   		background-repeat: no-repeat;
+	   		background-size: 100% 100%;
+	   		box-shadow: -15px 15px 25px rgba(0,0,0,0.8);
+	   	}
+	   	#content {
+	   		padding: 55px;
+	   		font-family: Tahoma;
+	   		font-style: oblique;	   		
+	   		text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+	   	}
+	   	.head {
+	   		display: block;
+	   		background-image: url(head.png);
+	   		background-repeat: no-repeat;
+	   		background-size: 100% 100%;
+	   		width: 80%; height: 25%;
+	   	}
+	   	.button {
+	   		display: inline;
+	   		background-image: url(button.png);
+			color: #fff;
+			padding: 25px;
+			margin-left: 10px;
+			margin-right: 10px;
+			font-family: Tahoma;
+			text-align: center;
+			border-radius: 20px;
+			text-shadow: 2px 2px 2px black;
+			box-shadow: -15px 15px 25px rgba(0,0,0,0.8);
+			cursor: pointer;
+	   	}
+	   	.vertical-button {
+	   		display: block;
+	   		background-color: rgba(0,0,0,0.3);
+	   		padding-left: 20px;
+	   		padding-right: 20px;
+	   		margin-right: 55px;
+	   		padding-top: 5px;
+	   		padding-bottom: 5px;
+	   		text-align: center;
+	   		cursor: pointer;
+	   		color: rgb(243,193,75);
+	   		font-family: Tahoma;
+	   		font-weight: 900;
+	   	}
+	   	.vertical-button:hover {
+	   		background-color: rgba(0,0,0,0.2);
+	   		color: rgb(243,220,165);
+	   	}
+	</style>
+
+	<script type="text/javascript" src="info.js"></script>
+
+	<script type="text/javascript">
+		var person = "Oblomov";
+		var type = info[person].name;
+
+		function setText(){
+			document.getElementById("content").innerHTML = type;
+		}
+	</script>
+
+</head>
+
+<body>
+
+	<div id="interface-container">
+
+		<div id="colons-container">
+			<div class="button" style="margin-left: 25px;" onclick="type = info[person].name; setText()">
+				Ф.И.О
+			</div>
+			<div class="button" onclick="type = info[person].age; setText()">
+				Возраст
+			</div>
+			<div class="button" onclick="type = info[person].portrait; setText()">
+				Портрет
+			</div>
+			<div class="button" onclick="type = info[person].status; setText()">
+				Социальный статус
+			</div>
+			<div class="button" onclick="type = info[person].stare; setText()">
+				Взгляды, образ жизни
+			</div>
+		</div>
+
+		<div id="content-container">
+			<div id="content"></div>
+		</div>
+
+	</div>
+
+	<div id="menu-container">
+		<div class="head"></div>
+
+		<div class="vertical-button" onclick='person = "Oblomov"; type = info[person].name; setText()'>
+			Илья Обломов
+		</div>
+		<div class="vertical-button" onclick='person = "Schtoltz"; type = info[person].name; setText()'>
+			Андрей Штольц
+		</div>
+		<div class="vertical-button" onclick='person = "Ilina"; type = info[person].name; setText()'>
+			Ольга Ильинская
+		</div>
+		<div class="vertical-button" onclick='person = "Zahar"; type = info[person].name; setText()'>
+			Захар
+		</div>
+		
+	</div>	
+
+</body>
